@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0A192F;
+    color: #FFF;
+}
+
+header {
+    background-color: #0A192F;
+    box-shadow: 2px 2px 5px white;
+    padding: 10px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00A8CC;
+    display: flex;
+    margin-left: 2%;
+}
+
+nav ul {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-top: 7px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #00A8CC;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.education-section {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.education-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.education-section h2 span {
+    color: #00A8CC;
+}
+
+.journey-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timeline {
+    background-color: #112240;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex: 1;
+    max-width: 45%;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #00A8CC;
+    border-radius: 50%;
+}
+
+.timeline-item .timeline-content {
+    background-color: #0A192F;
+    padding: 10px;
+    border-left: 2px solid #00A8CC;
+}
+
+.timeline-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.timeline-item span {
+    font-size: 1em;
+    color: #00A8CC;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0;
+}

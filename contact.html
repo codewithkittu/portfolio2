@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/profile.jpg">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1>Portfolio..</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Contact <span>Me</span></h2>
+            <form id="contact-form">
+                <div class="input">
+                    <input type="text" id="full-name" placeholder="Full Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="tel" id="phone" placeholder="Enter a M-Number">
+                </div>
+                <div class="submit">
+                    <button type="submit">Contact Me</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            if (fullName === '' || email === '' || phone === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Invalid email address');
+                return;
+            }
+
+            if (!validatePhone(phone)) {
+                alert('Invalid phone number');
+                return;
+            }
+
+            console.log('Form is valid');
+        });
+
+        function validateEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+            const phoneRegex = /^\d{10}$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+
+</body>
+</html>
